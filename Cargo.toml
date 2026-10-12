@@ -1,0 +1,22 @@
+[package]
+name = "waywe_daemonize"
+version = "0.5.0"
+license = "MIT OR Apache-2.0"
+edition = "2024"
+authors = [
+    "Fedor Gogolev <knsd@knsd.net>",
+    "Varov Svyatoslav <slava-varov3@mail.ru>",
+    "Alexander Filimonov <arnodarkrose@duck.com>",
+]
+repository = "https://github.com/hack3rmann/waywe-daemonize"
+documentation = "https://docs.rs/waywe_daemonize"
+readme = "README.md"
+description = "Library to enable your code run as a daemon process on Unix-like systems."
+keywords = ["daemon", "daemonize", "unix"]
+categories = ["os::unix-apis"]
+include = ["src/**/*", "README.md", "LICENSE-MIT", "LICENSE-APACHE"]
+
+[dependencies]
+libc = "0.2.98"
+rustix = { version = "1.1", features = ["process", "fs"] }
+thiserror = "2"
